@@ -1,0 +1,10 @@
+<h1>Your selected menu</h1>
+<h2>Name</h2>
+<p><%= @menu.name %></p>
+<h2>Dishes</h2>
+<ul>
+  <% dishes = @menu.dishes %>
+  <% dishes.each do |dish| %>
+  <li><%= link_to dish.name, dish_path(dish)  %></li>
+  <% end %>
+</ul>

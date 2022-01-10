@@ -1,0 +1,9 @@
+<h1>Create a dish</h1>
+<%= form_with model: @dish do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :price, placeholder: "price" %>
+  <%= form.text_field :description, placeholder: "description" %>
+  <%= form.collection_select(:menu_id, Menu.all, :id, :name) %>
+
+  <%= form.submit %>
+<% end %>

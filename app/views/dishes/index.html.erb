@@ -1,0 +1,11 @@
+<h1>All your Dishes</h1>
+<ul>
+  <% @errors.each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+</ul>
+<ul>
+  <% @dishes.each do |dish| %>
+  <li><%= dish.price %> <%= link_to dish.name, dish_path(dish)  %></li>
+  <% end %>
+</ul>
